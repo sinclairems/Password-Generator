@@ -12,18 +12,21 @@ https://sinclairems.github.io/Password-Generator/
 
 Here's what it will look like. Answer the first prompt with a number like so:
 
-    ```md
-    ![screenshot](assets/images/screenshot-1.png)
-    ```
+![screenshot](assets/images/screenshot-1.png)
 
 ## Credits
 
 For this project I referred to:
+
 Class notes
+
 I've been practicing JavaScript on freecodecamp.org -- JavaScript Tutorials
+
 Too many pages to list but: MDN -- Event Listeners
 
+
 This video was a huge help: https://www.youtube.com/watch?v=Xrsb9SiF3a8&t=1061s
+
 Finally, GitHub Copilot helped me clean everything up
 
 ## License
