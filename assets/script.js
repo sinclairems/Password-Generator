@@ -44,17 +44,29 @@ function generatePassword() {
     }
 
     // Display password in alert
-    alert("Your generated password is: " + password);
+    alert("Your password is: " + password);
 }
 
-// Event listener for button click
-// document.getElementById("generateBtn").addEventListener("click", generatePassword);
+// Given code:
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
 
-// This is the starter code provided by the assignment
-// Assignment code here
+// Write password to the #password input
+function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+
+    passwordText.value = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 
-/*
+
+
+
+/* This is code from YouTube Video 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 var length = i > 8 && i < 128 && i !== NaN;
