@@ -3,7 +3,7 @@
 // Function to generate a random password
 function generatePassword() {
     // Prompt for password length
-    var passwordLength = prompt("Enter password length between 8 and 128 characters:");
+    var passwordLength = prompt("How long would you like your password? Type a number between 8 and 128 characters:");
 
     // Validate input for password length
     if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
@@ -11,30 +11,30 @@ function generatePassword() {
         return;
     }
 
-    // Prompt for character types
-    var includeLowercase = confirm("Include lowercase characters?");
-    var includeUppercase = confirm("Include uppercase characters?");
-    var includeNumeric = confirm("Include numeric characters?");
-    var includeSpecial = confirm("Include special characters?");
+    // Prompts
+    var includeLowercase = confirm("Would you like to include lowercase characters?");
+    var includeUppercase = confirm("Would you like to include uppercase characters?");
+    var includeNumber = confirm("Would you like to include numeric characters?");
+    var includeSpecial = confirm("Would you like to include special characters?");
 
-    // Validate input for character types
-    if (!(includeLowercase || includeUppercase || includeNumeric || includeSpecial)) {
+    // Validate input 
+    if (!(includeLowercase || includeUppercase || includeNumber || includeSpecial)) {
         alert("Please select at least one character type.");
         return;
     }
 
-    // Define character sets
-    var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
-    var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var numericChars = "0123456789";
-    var specialChars = "!@#$%^&*()-_=+[]{}|;:'\",.<>/?";
+    // Character sets
+    var lowercase = "abcdefghijklmnopqrstuvwxyz";
+    var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var number = "0123456789";
+    var special = "!@#$%^&*()-_=+[]{}|;:'\",.<>/?";
 
-    // Combine selected character sets
+    // Combine character sets
     var allChars = "";
-    if (includeLowercase) allChars += lowercaseChars;
-    if (includeUppercase) allChars += uppercaseChars;
-    if (includeNumeric) allChars += numericChars;
-    if (includeSpecial) allChars += specialChars;
+    if (includeLowercase) allChars += lowercase;
+    if (includeUppercase) allChars += uppercase;
+    if (includeNumber) allChars += number;
+    if (includeSpecial) allChars += special;
 
     // Generate password
     var password = "";
